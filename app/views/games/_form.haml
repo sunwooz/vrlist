@@ -1,0 +1,21 @@
+= form_for @game, html: { multipart: true } do |f|
+
+  = f.label :name
+  = f.text_field :name
+  %br
+  = f.label :developer
+  = f.text_field :developer
+  %br
+  = f.label :detail
+  = f.text_area :detail
+  %br
+  = f.label :date_developed
+  = f.datetime_field :date_developed
+  %br
+  = f.label :genre_list
+  = f.text_field :genre_list
+  %br
+  = f.label :main_image
+  = f.file_field :main_image
+
+  = f.submit

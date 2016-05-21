@@ -24,6 +24,8 @@ gem 'aws-sdk-v1'
 gem 'paperclip'
 gem 'quiet_assets', :group => :development
 gem 'pg'
+gem 'acts-as-taggable-on'
+gem 'bootstrap-sass'
 
 group :production do
   gem 'rails_12factor'

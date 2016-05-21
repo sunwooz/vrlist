@@ -1,0 +1,60 @@
+class GamesController < ApplicationController
+
+  def new
+    @game = Game.new
+  end
+
+  def index
+    if params[:genres] && !params[:genres].empty?
+      @games = Game.tagged_with(params[:genres])
+      respond_to do |format|
+        format.js { render layout: false }
+      end
+    else
+      @games = Game.all
+      respond_to do |format|
+        format.js { render layout: false }
+        format.html
+      end
+    end
+  end
+
+  def create
+    @game = Game.new(game_params)
+
+    if @game.save
+      redirect_to @game
+    else
+      render :new
+    end
+  end
+
+  def show
+    @game = Game.find(params[:id])
+    render layout: 'full-width'
+  end
+
+  def edit
+    @game = Game.find(params[:id])
+  end
+
+  def update
+    @game = Game.find(params[:id])
+    if @game.update(game_params)
+      redirect_to @game
+    end
+  end
+
+  def destroy
+    @game = Game.find(params[:id])
+    if @game.destroy
+      redirect_to games_path
+    end
+  end
+
+  private
+
+  def game_params
+    params.require(:game).permit(:name, :date_developed, :detail, :developer, :genre_list, :main_image)
+  end
+end

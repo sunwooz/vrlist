@@ -1,0 +1,15 @@
+
+= image_tag @game.main_image.url(:large), class: 'img-responsive'
+%h2.game-name.show-page= @game.name
+
+= @game.name
+%br
+= @game.developer
+%br
+= @game.date_developed
+%br
+= @game.genre_list
+%br
+= @game.detail
+
+= link_to 'Destroy', @game, method: :delete

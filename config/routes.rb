@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
-  root to: 'pages#home'
+  root to: 'games#index'
+
+  get '/games' => 'games#index', as: :games
+  get '/games/new' => 'games#new', as: :new_game
+  post '/games' => 'games#create'
+  get '/games/:id' => 'games#show', as: :game
+  get '/games/:id/edit' => 'games#edit', as: :edit_game
+  patch '/games/:id' => 'games#update'
+  delete '/games/:id' => 'games#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
