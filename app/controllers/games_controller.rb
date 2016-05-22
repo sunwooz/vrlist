@@ -1,4 +1,5 @@
 class GamesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :edit, :destroy]
 
   def new
     @game = Game.new

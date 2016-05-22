@@ -7,9 +7,16 @@ h2.game-name {
    position: absolute; 
    top: 150px; 
    left: 30px;
-   width: 85%;
    background-color: rgba(0, 0, 15, .5);
    color: white;
+}
+
+h2.game-name a {
+  color: white;
+}
+
+h2.game-name a:hover {
+  text-decoration: none;
 }
 
 h2.show-page {

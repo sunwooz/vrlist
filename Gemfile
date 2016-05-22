@@ -26,6 +26,7 @@ gem 'quiet_assets', :group => :development
 gem 'pg'
 gem 'acts-as-taggable-on'
 gem 'bootstrap-sass'
+gem 'devise'
 
 group :production do
   gem 'rails_12factor'
