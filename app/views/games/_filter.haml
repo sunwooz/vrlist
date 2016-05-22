@@ -10,13 +10,25 @@
 = label_tag :app
 %br
 
-%h2 Number of Players
+%h2 Misc
 
 = check_box_tag 'players_single_player', "single-player", false, class: 'checkbox-filter genres'
 = label_tag :players_single_player, 'single player'
 %br
 = check_box_tag 'players_multi_player', "multi-player", false, class: 'checkbox-filter genres'
 = label_tag :players_multi_player, 'multi-player'
+%br
+= check_box_tag 'players_internet_required', "internet-required", false, class: 'checkbox-filter genres'
+= label_tag :players_internet_required, 'internet required'
+%br
+= check_box_tag 'players_internet_not_required', "internet-not-required", false, class: 'checkbox-filter genres'
+= label_tag :players_internet_not_required, 'internet not required'
+%br
+= check_box_tag 'players_gamepad_required', "gamepad-required", false, class: 'checkbox-filter genres'
+= label_tag :players_gamepad_required, 'gamepad required'
+%br
+= check_box_tag 'players_gamepad_not_required', "gamepad-not-required", false, class: 'checkbox-filter genres'
+= label_tag :players_gamepad_not_required, 'gamepad not required'
 %br
 
 %h2 Genres
