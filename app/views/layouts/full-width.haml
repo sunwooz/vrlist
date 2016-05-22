@@ -6,5 +6,8 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
-
+    .row
+      .col-xs-12
+        = link_to 'Home', root_url
+        
     = yield
