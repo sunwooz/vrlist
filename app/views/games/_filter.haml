@@ -10,11 +10,14 @@
 = label_tag :app
 %br
 
-/ %h2 Misc
+%h2 Number of Players
 
-/ = check_box_tag 'categories[]', "app", false, class: 'checkbox-filter categories'
-/ = label_tag :app
-/ %br
+= check_box_tag 'players_single_player', "single-player", false, class: 'checkbox-filter genres'
+= label_tag :players_single_player, 'single player'
+%br
+= check_box_tag 'players_multi_player', "multi-player", false, class: 'checkbox-filter genres'
+= label_tag :players_multi_player, 'multi-player'
+%br
 
 %h2 Genres
 
