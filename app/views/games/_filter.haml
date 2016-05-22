@@ -10,11 +10,14 @@
 = label_tag :app
 %br
 
+%h2 Misc
+
+= check_box_tag 'categories[]', "app", false, class: 'checkbox-filter categories'
+= label_tag :app
+%br
+
 %h2 Genres
 
-= check_box_tag 'genres[]', "comedy", false, class: 'checkbox-filter genres'
-= label_tag :comedy
-%br
 = check_box_tag 'genres[]', "action", false, class: 'checkbox-filter genres'
 = label_tag :action
 %br
