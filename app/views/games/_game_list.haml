@@ -1,5 +1,5 @@
 - @games.each do |game|
-  .col-xs-6
+  .col-xs-12.col-md-6
     = link_to (image_tag game.main_image.url(:medium), class: 'img-responsive main-image'), game
     %h2.game-name= game.name
     = game.genre_list
