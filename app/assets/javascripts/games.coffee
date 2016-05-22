@@ -1,17 +1,23 @@
 $ ->
-  $('input.genres').change () ->
+  $('input.checkbox-filter').change () ->
     genres = []
+    categories = []
 
     $('.genres:checked').each (index, genre) ->
       genres.push genre.value
 
-    console.log genres
+    $('.categories:checked').each (index, category) ->
+      categories.push category.value
+
+    # console.log genres
+    # console.log categories
 
     $.ajax({
       method: 'get'
       url: '/games'
       data:
         genres: genres
+        categories: categories
     })
 
   #separate tags with commas in form
