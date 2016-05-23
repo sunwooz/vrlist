@@ -9,5 +9,7 @@
     .row
       .col-xs-12
         = link_to 'Home', root_url
+        - if current_user && current_user.email == 'yangsunwoo@gmail.com'
+          = link_to 'Edit Game', edit_game_path(@game)
         
     = yield
