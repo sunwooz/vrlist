@@ -27,6 +27,7 @@ gem 'pg'
 gem 'acts-as-taggable-on'
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'ratyrate'
 
 group :production do
   gem 'rails_12factor'
