@@ -1,4 +1,10 @@
 %br
+- @genres.each do |genre|
+  = link_to genre, add_genre_path(genre), remote: true
+  |
+
+%br
+%br
 = link_to 'Single Player', add_genre_path('single-player'), remote: true
 %br
 = link_to 'Multi-Player', add_genre_path('multi-player'), remote: true

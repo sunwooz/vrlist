@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
   # before_action :authenticate_user!, only: [:new, :edit, :destroy]
+  before_action :genres, only: [:new, :edit]
 
   def new
     @game = Game.new
@@ -70,5 +71,9 @@ class GamesController < ApplicationController
 
   def game_params
     params.require(:game).permit(:name, :date_developed, :detail, :developer, :genre_list, :category, :main_image, :website, :price)
+  end
+
+  def genres
+    @genres = %w(action simulation educational horror adventure exploration rpg casual puzzle narrative arcade shooter movie music video utilities sports productivity music arcade racing fighting strategy)
   end
 end
