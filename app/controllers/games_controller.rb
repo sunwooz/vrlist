@@ -61,7 +61,7 @@ class GamesController < ApplicationController
   end
 
   def add_genre
-    @genre = params[:genre]
+    @genre = params[:genre].sort
     respond_to do |format|
       format.js { render layout: false }
     end
