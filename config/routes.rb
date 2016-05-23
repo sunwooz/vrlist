@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get '/games/:id/edit' => 'games#edit', as: :edit_game
   patch '/games/:id' => 'games#update'
   delete '/games/:id' => 'games#destroy'
+  get '/add_genre/:genre' => 'games#add_genre', as: :add_genre
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,3 +1,20 @@
+%br
+= link_to 'Single Player', add_genre_path('single-player'), remote: true
+%br
+= link_to 'Multi-Player', add_genre_path('multi-player'), remote: true
+%br
+= link_to 'gamepad required', add_genre_path('gamepad-required'), remote: true
+%br
+= link_to 'internet required', add_genre_path('internet-required'), remote: true
+%br
+= link_to 'gamepad support', add_genre_path('gamepad-support'), remote: true
+%br
+= link_to 'touchpad support', add_genre_path('touchpad-support'), remote: true
+%br
+= link_to 'free', add_genre_path('free'), remote: true
+%br
+= link_to 'paid', add_genre_path('paid'), remote: true
+
 = form_for @game, html: { multipart: true } do |f|
 
   = f.label :name
@@ -16,7 +33,7 @@
   = f.datetime_field :date_developed
   %br
   = f.label :genre_list
-  = f.text_field :genre_list
+  = f.text_field :genre_list, size: 150
   %br
   = f.label :category
   = f.text_field :category

@@ -59,6 +59,13 @@ class GamesController < ApplicationController
     end
   end
 
+  def add_genre
+    @genre = params[:genre]
+    respond_to do |format|
+      format.js { render layout: false }
+    end
+  end
+
   private
 
   def game_params
