@@ -28,6 +28,7 @@ gem 'acts-as-taggable-on'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'ratyrate'
+gem 'will_paginate'
 
 group :production do
   gem 'rails_12factor'

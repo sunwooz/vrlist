@@ -8,21 +8,22 @@ class GamesController < ApplicationController
 
   def index
     if !params[:genres] && !params[:categories]
-      @games = Game.all
+      @games = Game.paginate(:page => params[:page], :per_page => 5)
       respond_to do |format|
         format.js { render layout: false }
         format.html
       end
     else
       if !params[:genres]
-        @games = Game.where(category: params[:categories])
+        @games = Game.where(category: params[:categories]).paginate(:page => params[:page], :per_page => 5)
       elsif !params[:categories]
-        @games = Game.tagged_with(params[:genres])
+        @games = Game.tagged_with(params[:genres]).paginate(:page => params[:page], :per_page => 5)
       else
-        @games = Game.where(category: params[:categories]).tagged_with(params[:genres])
+        @games = Game.where(category: params[:categories]).tagged_with(params[:genres]).paginate(:page => params[:page], :per_page => 5)
       end
       respond_to do |format|
         format.js { render layout: false }
+        format.html
       end
     end
   end
