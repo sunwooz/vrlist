@@ -7,19 +7,21 @@ class GamesController < ApplicationController
   end
 
   def index
+    page = check_page
+
     if !params[:genres] && !params[:categories]
-      @games = Game.paginate(:page => params[:page], :per_page => 6)
+      @games = Game.paginate(:page => page, :per_page => 6)
       respond_to do |format|
         format.js { render layout: false }
         format.html
       end
     else
       if !params[:genres]
-        @games = Game.where(category: params[:categories]).paginate(:page => params[:page], :per_page => 6)
+        @games = Game.where(category: params[:categories]).paginate(:page => page, :per_page => 6)
       elsif !params[:categories]
-        @games = Game.tagged_with(params[:genres]).paginate(:page => params[:page], :per_page => 6)
+        @games = Game.tagged_with(params[:genres]).paginate(:page => page, :per_page => 6)
       else
-        @games = Game.where(category: params[:categories]).tagged_with(params[:genres]).paginate(:page => params[:page], :per_page => 6)
+        @games = Game.where(category: params[:categories]).tagged_with(params[:genres]).paginate(:page => page, :per_page => 6)
       end
       respond_to do |format|
         format.js { render layout: false }
@@ -76,5 +78,10 @@ class GamesController < ApplicationController
 
   def genres
     @genres = %w(action simulation educational horror adventure exploration rpg casual puzzle narrative arcade shooter movie music video utilities sports productivity music arcade racing fighting strategy).sort
+  end
+
+  def check_page
+    p = params[:page].to_i
+    p > 1 ? p : 1
   end
 end
