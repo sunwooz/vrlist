@@ -94,7 +94,7 @@ input[type="checkbox"] + label span {
   display:inline-block;
   width:19px;
   height:19px;
-  background: url(images/checkbox.png) center no-repeat;
+  background: image-url("checkbox.png") center no-repeat;
   background-size: contain;
   position: relative;
   left: -10px;
@@ -106,7 +106,7 @@ input[type="checkbox"]:checked + label span {
   display:inline-block;
   width:19px;
   height:19px;
-  background: url(images/checked-checkbox.png) left top no-repeat;
+  background: image-url("checked-checkbox.png") left top no-repeat;
   background-size: contain;
   position: relative;
   left: -10px;
