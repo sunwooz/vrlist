@@ -1,107 +1,139 @@
-%h2 Category
+%h2.checkbox-title Category
 
-= check_box_tag 'categories[]', "game", false, class: 'checkbox-filter categories'
-= label_tag :game
-%br
-= check_box_tag 'categories[]', "entertainment", false, class: 'checkbox-filter categories'
-= label_tag :entertainment
-%br
-= check_box_tag 'categories[]', "app", false, class: 'checkbox-filter categories'
-= label_tag :app
-%br
+.checkbox-wrapper
+  = check_box_tag 'categories[]', "game", false, class: 'checkbox-filter categories'
+  = label_tag :game, "<span></span>game".html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'categories[]', "entertainment", false, class: 'checkbox-filter categories'
+  = label_tag :entertainment, "<span></span>entertainment".html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'categories[]', "app", false, class: 'checkbox-filter categories'
+  = label_tag :app, "<span></span>app".html_safe, class: 'checkbox-label'
+
 
 %h2 Misc
 
-= check_box_tag 'players_single_player', "single-player", false, class: 'checkbox-filter genres'
-= label_tag :players_single_player, 'single player'
-%br
-= check_box_tag 'players_multi_player', "multi-player", false, class: 'checkbox-filter genres'
-= label_tag :players_multi_player, 'multi-player'
-%br
-= check_box_tag 'players_internet_required', "internet-required", false, class: 'checkbox-filter genres'
-= label_tag :players_internet_required, 'internet required'
-%br
-= check_box_tag 'players_gamepad_required', "gamepad-required", false, class: 'checkbox-filter genres'
-= label_tag :players_gamepad_required, 'gamepad required'
-%br
-= check_box_tag 'players_gamepad_support', "gamepad-support", false, class: 'checkbox-filter genres'
-= label_tag :players_gamepad_support, 'gamepad support'
-%br
-= check_box_tag 'players_touchpad_support', "touchpad-support", false, class: 'checkbox-filter genres'
-= label_tag :players_touchpad_support, 'touchpad support'
-%br
-= check_box_tag 'players_free', "free", false, class: 'checkbox-filter genres'
-= label_tag :players_free, 'free'
-%br
-= check_box_tag 'players_paid', "paid", false, class: 'checkbox-filter genres'
-= label_tag :players_paid, 'paid'
-%br
+.checkbox-wrapper
+  = check_box_tag 'players_single_player', "single-player", false, class: 'checkbox-filter genres'
+  = label_tag :players_single_player, "<span></span>single player".html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'players_multi_player', "multi-player", false, class: 'checkbox-filter genres'
+  = label_tag :players_multi_player, '<span></span>multi-player'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'players_internet_required', "internet-required", false, class: 'checkbox-filter genres'
+  = label_tag :players_internet_required, '<span></span>internet required'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'players_gamepad_required', "gamepad-required", false, class: 'checkbox-filter genres'
+  = label_tag :players_gamepad_required, '<span></span>gamepad required'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'players_gamepad_support', "gamepad-support", false, class: 'checkbox-filter genres'
+  = label_tag :players_gamepad_support, '<span></span>gamepad support'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'players_touchpad_support', "touchpad-support", false, class: 'checkbox-filter genres'
+  = label_tag :players_touchpad_support, '<span></span>touchpad support'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'players_free', "free", false, class: 'checkbox-filter genres'
+  = label_tag :players_free, '<span></span>free'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'players_paid', "paid", false, class: 'checkbox-filter genres'
+  = label_tag :players_paid, '<span></span>paid'.html_safe, class: 'checkbox-label'
+
 
 %h2 Genres
 
-= check_box_tag 'genre_action', "action", false, class: 'checkbox-filter genres'
-= label_tag :genre_action, 'action'
-%br
-= check_box_tag 'genre_simulation', "simulation", false, class: 'checkbox-filter genres'
-= label_tag :genre_simulation, 'simulation'
-%br
-= check_box_tag 'genre_educational', "educational", false, class: 'checkbox-filter genres'
-= label_tag :genre_educational, 'educational'
-%br
-= check_box_tag 'genre_horror', "horror", false, class: 'checkbox-filter genres'
-= label_tag :genre_horror, 'horror'
-%br
-= check_box_tag 'genre_adventure', "adventure", false, class: 'checkbox-filter genres'
-= label_tag :genre_adventure, 'adventure'
-%br
-= check_box_tag 'genre_exploration', "exploration", false, class: 'checkbox-filter genres'
-= label_tag :genre_exploration, 'exploration'
-%br
-= check_box_tag 'genre_rpg', "rpg", false, class: 'checkbox-filter genres'
-= label_tag :genre_rpg, 'rpg'
-%br
-= check_box_tag 'genre_casual', "casual", false, class: 'checkbox-filter genres'
-= label_tag :genre_casual, 'casual'
-%br
-= check_box_tag 'genre_puzzle', "puzzle", false, class: 'checkbox-filter genres'
-= label_tag :genre_puzzle, 'puzzle'
-%br
-= check_box_tag 'genre_narrative', "narrative", false, class: 'checkbox-filter genres'
-= label_tag :genre_narrative, 'narrative'
-%br
-= check_box_tag 'genre_arcade', "arcade", false, class: 'checkbox-filter genres'
-= label_tag :genre_arcade, 'arcade'
-%br
-= check_box_tag 'genre_shooter', "shooter", false, class: 'checkbox-filter genres'
-= label_tag :genre_shooter, 'shooter'
-%br
-= check_box_tag 'genre_movie', "movie", false, class: 'checkbox-filter genres'
-= label_tag :genre_movie, 'movie'
-%br
-= check_box_tag 'genre_music_video', "music-video", false, class: 'checkbox-filter genres'
-= label_tag :genre_music_video, 'music video'
-%br
-= check_box_tag 'genre_utilities', "utilities", false, class: 'checkbox-filter genres'
-= label_tag :genre_utilities, 'utilities'
-%br
-= check_box_tag 'genre_sports', "sports", false, class: 'checkbox-filter genres'
-= label_tag :genre_sports, 'sports'
-%br
-= check_box_tag 'genre_productivity', "productivity", false, class: 'checkbox-filter genres'
-= label_tag :genre_productivity, 'productivity'
-%br
-= check_box_tag 'genre_music', "music", false, class: 'checkbox-filter genres'
-= label_tag :genre_music, 'music'
-%br
-= check_box_tag 'genre_arcade', "arcade", false, class: 'checkbox-filter genres'
-= label_tag :genre_arcade, 'arcade'
-%br
-= check_box_tag 'genre_racing', "racing", false, class: 'checkbox-filter genres'
-= label_tag :genre_racing, 'racing'
-%br
-= check_box_tag 'genre_fighting', "fighting", false, class: 'checkbox-filter genres'
-= label_tag :genre_fighting, 'fighting'
-%br
-= check_box_tag 'genre_strategy', "strategy", false, class: 'checkbox-filter genres'
-= label_tag :genre_strategy, 'strategy'
-%br
+.checkbox-wrapper
+  = check_box_tag 'genre_action', "action", false, class: 'checkbox-filter genres'
+  = label_tag :genre_action, '<span></span>action'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_simulation', "simulation", false, class: 'checkbox-filter genres'
+  = label_tag :genre_simulation, '<span></span>simulation'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_educational', "educational", false, class: 'checkbox-filter genres'
+  = label_tag :genre_educational, '<span></span>educational'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_horror', "horror", false, class: 'checkbox-filter genres'
+  = label_tag :genre_horror, '<span></span>horror'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_adventure', "adventure", false, class: 'checkbox-filter genres'
+  = label_tag :genre_adventure, '<span></span>adventure'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_exploration', "exploration", false, class: 'checkbox-filter genres'
+  = label_tag :genre_exploration, '<span></span>exploration'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_rpg', "rpg", false, class: 'checkbox-filter genres'
+  = label_tag :genre_rpg, '<span></span>rpg'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_casual', "casual", false, class: 'checkbox-filter genres'
+  = label_tag :genre_casual, '<span></span>casual'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_puzzle', "puzzle", false, class: 'checkbox-filter genres'
+  = label_tag :genre_puzzle, '<span></span>puzzle'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_narrative', "narrative", false, class: 'checkbox-filter genres'
+  = label_tag :genre_narrative, '<span></span>narrative'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_arcade', "arcade", false, class: 'checkbox-filter genres'
+  = label_tag :genre_arcade, '<span></span>arcade'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_shooter', "shooter", false, class: 'checkbox-filter genres'
+  = label_tag :genre_shooter, '<span></span>shooter'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_movie', "movie", false, class: 'checkbox-filter genres'
+  = label_tag :genre_movie, '<span></span>movie'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_music_video', "music-video", false, class: 'checkbox-filter genres'
+  = label_tag :genre_music_video, '<span></span>music video'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_utilities', "utilities", false, class: 'checkbox-filter genres'
+  = label_tag :genre_utilities, '<span></span>utilities'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_sports', "sports", false, class: 'checkbox-filter genres'
+  = label_tag :genre_sports, '<span></span>sports'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_productivity', "productivity", false, class: 'checkbox-filter genres'
+  = label_tag :genre_productivity, '<span></span>productivity'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_music', "music", false, class: 'checkbox-filter genres'
+  = label_tag :genre_music, '<span></span>music'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_arcade', "arcade", false, class: 'checkbox-filter genres'
+  = label_tag :genre_arcade, '<span></span>arcade'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_racing', "racing", false, class: 'checkbox-filter genres'
+  = label_tag :genre_racing, '<span></span>racing'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_fighting', "fighting", false, class: 'checkbox-filter genres'
+  = label_tag :genre_fighting, '<span></span>fighting'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'genre_strategy', "strategy", false, class: 'checkbox-filter genres'
+  = label_tag :genre_strategy, '<span></span>strategy'.html_safe, class: 'checkbox-label'

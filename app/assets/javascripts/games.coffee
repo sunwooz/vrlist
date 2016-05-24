@@ -1,4 +1,13 @@
 $ ->
+
+  $('.checkbox-wrapper').click ->
+    if $(this).find('input').prop('checked')
+      $(this).find('input').prop('checked', false).change()
+      $(this).removeClass('checked')
+    else
+      $(this).find('input').prop('checked', true).change()
+      $(this).addClass('checked')
+      
   $('input.checkbox-filter').change () ->
     genres = []
     categories = []
