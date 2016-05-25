@@ -29,6 +29,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'ratyrate'
 gem 'will_paginate'
+gem 'friendly_id', '~> 5.1.0'
 
 group :production do
   gem 'rails_12factor'

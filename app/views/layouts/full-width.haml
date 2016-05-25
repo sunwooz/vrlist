@@ -6,13 +6,13 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
     = javascript_include_tag 'ratyrate.js'
-    %link{ href: 'https://fonts.googleapis.com/css?family=Quattrocento:400,700', rel: 'stylesheet', type: 'text/css' }
+    %link{ href: 'https://fonts.googleapis.com/css?family=Ubuntu:700|Permanent+Marker', rel: 'stylesheet', type: 'text/css' }
   %body
 
     .container.container-full
       .row
-        .col-xs-12.no-padding
-          = link_to 'Home', root_url
+        .col-xs-12.no-padding.site-nav
+          = link_to 'The VR Machine', root_url, class: 'logo'
           - if current_user && current_user.email == 'yangsunwoo@gmail.com'
             = link_to 'Edit Game', edit_game_path(@game)
           
