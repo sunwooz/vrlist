@@ -13,7 +13,7 @@
   = label_tag :app, "<span></span>app".html_safe, class: 'checkbox-label'
 
 
-%h2 Misc
+%h2.checkbox-title Features
 
 .checkbox-wrapper
   = check_box_tag 'players_single_player', "single-player", false, class: 'checkbox-filter genres'
@@ -48,7 +48,7 @@
   = label_tag :players_paid, '<span></span>paid'.html_safe, class: 'checkbox-label'
 
 
-%h2 Genres
+%h2.checkbox-title Genres
 
 .checkbox-wrapper
   = check_box_tag 'genre_action', "action", false, class: 'checkbox-filter genres'
