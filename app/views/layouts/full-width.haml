@@ -11,7 +11,7 @@
 
     .container.container-full
       .row
-        .col-xs-12.no-padding.site-nav
+        .col-xs-12.no-padding.show-site-nav
           = link_to 'The VR Machine', root_url, class: 'logo'
           - if current_user && current_user.email == 'yangsunwoo@gmail.com'
             = link_to 'Edit Game', edit_game_path(@game)
