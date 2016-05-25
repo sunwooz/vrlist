@@ -1,15 +1,15 @@
 %h2.checkbox-title Category
 
-.checkbox-wrapper
-  = check_box_tag 'categories[]', "game", false, class: 'checkbox-filter categories'
+.checkbox-wrapper.checked
+  = check_box_tag 'categories[]', "game", true, class: 'checkbox-filter categories'
   = label_tag :game, "<span></span>game".html_safe, class: 'checkbox-label'
 
-.checkbox-wrapper
-  = check_box_tag 'categories[]', "entertainment", false, class: 'checkbox-filter categories'
+.checkbox-wrapper.checked
+  = check_box_tag 'categories[]', "entertainment", true, class: 'checkbox-filter categories'
   = label_tag :entertainment, "<span></span>entertainment".html_safe, class: 'checkbox-label'
 
-.checkbox-wrapper
-  = check_box_tag 'categories[]', "app", false, class: 'checkbox-filter categories'
+.checkbox-wrapper.checked
+  = check_box_tag 'categories[]', "app", true, class: 'checkbox-filter categories'
   = label_tag :app, "<span></span>app".html_safe, class: 'checkbox-label'
 
 
