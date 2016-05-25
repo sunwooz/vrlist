@@ -1,0 +1,5 @@
+- @posts.each do |post|
+  = link_to post.title, post
+  - if current_user && current_user.email == 'yangsunwoo@gmail.com'
+    = link_to 'destroy', post, method: :delete
+  %br

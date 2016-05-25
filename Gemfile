@@ -30,6 +30,8 @@ gem 'devise'
 gem 'ratyrate'
 gem 'will_paginate'
 gem 'friendly_id', '~> 5.1.0'
+gem 'markdown-rails'
+gem 'redcarpet'
 
 group :production do
   gem 'rails_12factor'

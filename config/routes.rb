@@ -4,6 +4,17 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'games#index'
 
+  #posts
+  get '/posts/tags/:tag' => 'posts#index', as: :posts_tag
+  get '/posts/new' => 'posts#new', as: :new_post
+  post '/posts' => 'posts#create'
+  get '/post/:id' => 'posts#show', as: :post
+  delete '/post/:id' => 'posts#destroy'
+  get '/post/:id/edit' => 'posts#edit', as: :edit_post
+  patch '/post/:id' => 'posts#update'
+
+  #games
+
   get '/games' => 'games#index', as: :games
   get '/games/new' => 'games#new', as: :new_game
   post '/games' => 'games#create'
