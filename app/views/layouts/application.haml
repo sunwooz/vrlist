@@ -5,9 +5,9 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-  %body
+  %body.overflow-x-hidden
     .row
-      .col-xs-12
+      .col-xs-12.no-padding
         = link_to 'Home', root_url
         - if current_user && current_user.email == 'yangsunwoo@gmail.com'
           = link_to 'New', new_game_path

@@ -1,7 +1,6 @@
 - @games.each do |game|
-  .col-xs-12.col-md-6
+  .col-xs-12.col-md-6.single-game
     = link_to (image_tag game.main_image.url(:medium), class: 'img-responsive main-image'), game
     %h2.game-name= link_to game.name, game
-    = game.genre_list
 
 = will_paginate @games
