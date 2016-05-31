@@ -90,6 +90,10 @@ h2.show-page {
 
 /*show page*/
 
+.games-show-wrapper {
+  padding: 10px 40px;
+}
+
 .show-site-nav {
   background: image-url("stardust.png") center repeat;
   height: 60px;
@@ -99,10 +103,6 @@ h2.game-title {
   font-family: 'Quattrocento', serif;
   font-weight: 700;
   font-size: 50px;
-}
-
-.game-details {
-  padding: 0px 25% 5% 25%;
 }
 
 /*checkbox css*/

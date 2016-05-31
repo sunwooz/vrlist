@@ -1,21 +1,26 @@
 = image_tag @game.main_image.url(:large), class: 'img-responsive'
 
-%h2.game-title.center-text= @game.name
+.row.games-show-wrapper
+  .col-xs-6
 
-.game-details
-  %p.center-text 
- 
-  = rating_for @game, "rating", enable_half: true, half_show: true, star_path: '/images/ratyrate'
-  %br
-  = @game.developer
-  %br
-  Released:
-  = @game.date_developed.strftime("%b %d, %Y")
-  %br
-  = @game.genre_list
-  %br
-  = @game.category
-  %br
-  = @game.website
-  %br
-  = @game.detail
+    %h2.game-title= @game.name
+
+    %p.center-text 
+   
+    = rating_for @game, "rating", enable_half: true, half_show: true, star_path: '/images/ratyrate'
+    %br
+    = @game.developer
+    %br
+    Released:
+    = @game.date_developed.strftime("%b %d, %Y")
+    %br
+    = @game.genre_list
+    %br
+    = @game.category
+    %br
+    = @game.website
+    %br
+    = @game.detail
+
+  .col-xs-6
+    
