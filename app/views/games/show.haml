@@ -24,7 +24,8 @@
 
   .col-xs-6
     #slick
-      - @game.attachments.each do |attachment|
-        %img.img-responsive{ src: attachment.image.url }
+      if @game.attachments
+        - @game.attachments.each do |attachment|
+          %img.img-responsive{ src: attachment.image.url }
 
 
