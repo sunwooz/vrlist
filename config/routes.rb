@@ -15,13 +15,13 @@ Rails.application.routes.draw do
 
   #games
 
-  get '/games' => 'games#index', as: :games
-  get '/games/new' => 'games#new', as: :new_game
-  post '/games' => 'games#create'
-  get '/games/:id' => 'games#show', as: :game
-  get '/games/:id/edit' => 'games#edit', as: :edit_game
-  patch '/games/:id' => 'games#update'
-  delete '/games/:id' => 'games#destroy'
+  get '/gearvr' => 'games#index', as: :games
+  get '/gearvr/new' => 'games#new', as: :new_game
+  post '/gearvr' => 'games#create'
+  get '/gearvr/:id' => 'games#show', as: :game
+  get '/gearvr/:id/edit' => 'games#edit', as: :edit_game
+  patch '/gearvr/:id' => 'games#update'
+  delete '/gearvr/:id' => 'games#destroy'
   get '/add_genre/:genre' => 'games#add_genre', as: :add_genre
   
   # The priority is based upon order of creation: first created -> highest priority.
