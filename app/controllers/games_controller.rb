@@ -52,6 +52,9 @@ class GamesController < ApplicationController
   def update
     @game = Game.friendly.find(params[:id])
     if @game.update(game_params)
+      params[:game][:attachment][:image].each do |image|
+        @game.attachments.create(image: image)
+      end
       redirect_to @game
     end
   end

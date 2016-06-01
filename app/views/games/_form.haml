@@ -49,5 +49,10 @@
   %br
   = f.label :main_image
   = f.file_field :main_image
+  %br
+  = f.fields_for :attachment do |ff|
+    %div
+      = ff.label :image
+      = ff.file_field :image, multiple: true
 
   = f.submit
