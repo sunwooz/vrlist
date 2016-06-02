@@ -1,6 +1,7 @@
 class GamesController < ApplicationController
   # before_action :authenticate_user!, only: [:new, :edit, :destroy]
   before_action :genres, only: [:new, :edit]
+  before_action :redirect_if_not_admin, only: [:new, :edit, :destroy]
 
   def new
     @game = Game.new
@@ -34,6 +35,11 @@ class GamesController < ApplicationController
     @game = Game.new(game_params)
 
     if @game.save
+      if params[:game][:attachment]
+        params[:game][:attachment][:image].each do |image|
+          @game.attachments.create(image: image)
+        end
+      end
       redirect_to @game
     else
       render :new
@@ -89,5 +95,9 @@ class GamesController < ApplicationController
   def check_page
     p = params[:page].to_i
     p > 1 ? p : 1
+  end
+
+  def redirect_if_not_admin
+    redirect_to root_url if current_user && current_user.email != 'yangsunwoo@gmail.com'
   end
 end
