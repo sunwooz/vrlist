@@ -9,6 +9,7 @@
    
     = rating_for @game, "rating", enable_half: true, half_show: true, star_path: '/images/ratyrate'
     %br
+    Developers: 
     = @game.developer
     %br
     Released:
@@ -18,7 +19,7 @@
     %br
     = @game.category
     %br
-    = @game.website
+    = link_to @game.website, @game.website, target: '_blank'
     %br
     = @game.detail
 
