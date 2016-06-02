@@ -42,6 +42,7 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.friendly.find(params[:id])
+    @youtube_videos = @game.youtube_videos.split
     render layout: 'full-width'
   end
 
@@ -51,12 +52,12 @@ class GamesController < ApplicationController
 
   def update
     @game = Game.friendly.find(params[:id])
-    if @game.update(game_params)
+    if @game.update(game_params) && params[:game][:attachment]
       params[:game][:attachment][:image].each do |image|
         @game.attachments.create(image: image)
       end
-      redirect_to @game
     end
+    redirect_to @game
   end
 
   def destroy
@@ -76,7 +77,7 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:name, :date_developed, :detail, :developer, :genre_list, :category, :main_image, :website, :price)
+    params.require(:game).permit(:name, :date_developed, :detail, :developer, :genre_list, :category, :main_image, :website, :price, :youtube_videos)
   end
 
   def genres

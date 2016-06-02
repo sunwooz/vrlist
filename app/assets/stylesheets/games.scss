@@ -90,6 +90,18 @@ h2.show-page {
 
 /*show page*/
 
+#media-wrapper {
+  padding-top: 30px;
+}
+
+.slick-list {
+  height: 400px !important;
+}
+
+#slick iframe {
+  height: 400px !important;
+}
+
 .games-show-wrapper {
   padding: 10px 40px;
 }
