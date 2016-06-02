@@ -23,7 +23,7 @@ $ ->
 
     $.ajax({
       method: 'get'
-      url: '/games'
+      url: '/gearvr'
       data:
         genres: genres
         categories: categories
