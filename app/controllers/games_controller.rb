@@ -42,7 +42,7 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.friendly.find(params[:id])
-    @youtube_videos = @game.youtube_videos.split
+    @youtube_videos = @game.youtube_videos.split if !@game.youtube_videos.nil?
     render layout: 'full-width'
   end
 
