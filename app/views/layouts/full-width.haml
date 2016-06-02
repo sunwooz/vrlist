@@ -15,5 +15,6 @@
           = link_to 'The VR Machine', root_url, class: 'logo'
           - if current_user && current_user.email == 'yangsunwoo@gmail.com'
             = link_to 'Edit Game', edit_game_path(@game)
+            = link_to 'Destroy Game', @game, method: :delete, confirm: 'You sure boya?'
           
       = yield
