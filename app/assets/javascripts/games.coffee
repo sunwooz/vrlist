@@ -41,3 +41,5 @@ $ ->
     dots: true
     adaptiveHeight: true
   })
+
+  $('iframe').eq(0).css('position', 'relative')
