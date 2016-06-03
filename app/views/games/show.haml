@@ -21,7 +21,7 @@
     %br
     = @game.category
     %br
-    = link_to @game.website, @game.website, target: '_blank'
+    %a{ href: @game.website, target: '_blank' }
     %br
     = @game.detail
 
