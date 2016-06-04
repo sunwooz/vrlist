@@ -16,6 +16,14 @@
 %h2.checkbox-title Features
 
 .checkbox-wrapper
+  = check_box_tag 'players_free', "free", false, class: 'checkbox-filter genres'
+  = label_tag :players_free, '<span></span>free'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
+  = check_box_tag 'players_paid', "paid", false, class: 'checkbox-filter genres'
+  = label_tag :players_paid, '<span></span>paid'.html_safe, class: 'checkbox-label'
+
+.checkbox-wrapper
   = check_box_tag 'players_single_player', "single-player", false, class: 'checkbox-filter genres'
   = label_tag :players_single_player, "<span></span>single player".html_safe, class: 'checkbox-label'
 
@@ -38,14 +46,6 @@
 .checkbox-wrapper
   = check_box_tag 'players_touchpad_support', "touchpad-support", false, class: 'checkbox-filter genres'
   = label_tag :players_touchpad_support, '<span></span>touchpad support'.html_safe, class: 'checkbox-label'
-
-.checkbox-wrapper
-  = check_box_tag 'players_free', "free", false, class: 'checkbox-filter genres'
-  = label_tag :players_free, '<span></span>free'.html_safe, class: 'checkbox-label'
-
-.checkbox-wrapper
-  = check_box_tag 'players_paid', "paid", false, class: 'checkbox-filter genres'
-  = label_tag :players_paid, '<span></span>paid'.html_safe, class: 'checkbox-label'
 
 
 %h2.checkbox-title Genres
