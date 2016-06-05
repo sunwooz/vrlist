@@ -11,18 +11,18 @@ class GamesController < ApplicationController
     page = check_page
 
     if !params[:genres] && !params[:categories]
-      @games = Game.paginate(:page => page, :per_page => 6).order('date_developed DESC')
+      @games = Game.paginate(:page => page, :per_page => 6).latest
       respond_to do |format|
         format.js { render layout: false }
         format.html
       end
     else
       if !params[:genres]
-        @games = Game.where(category: params[:categories]).paginate(:page => page, :per_page => 6).order('date_developed DESC')
+        @games = Game.where(category: params[:categories]).paginate(:page => page, :per_page => 6).latest
       elsif !params[:categories]
-        @games = Game.tagged_with(params[:genres]).paginate(:page => page, :per_page => 6).order('date_developed DESC')
+        @games = Game.tagged_with(params[:genres]).paginate(:page => page, :per_page => 6).latest
       else
-        @games = Game.where(category: params[:categories]).tagged_with(params[:genres]).paginate(:page => page, :per_page => 6).order('date_developed DESC')
+        @games = Game.where(category: params[:categories]).tagged_with(params[:genres]).paginate(:page => page, :per_page => 6).latest
       end
       respond_to do |format|
         format.js { render layout: false }
