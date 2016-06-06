@@ -25,7 +25,7 @@ class Game < ActiveRecord::Base
 
   def full_url
     if !website.include?('http')
-      "https://#{self.website}"
+      "http://#{self.website}"
     else
       self.website
     end
