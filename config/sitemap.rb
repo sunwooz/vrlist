@@ -1,7 +1,10 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "http://www.example.com"
+SitemapGenerator::Sitemap.default_host = "http://www.vrmachine.io"
 
 SitemapGenerator::Sitemap.create do
+  Game.find_each do |game|
+    add game_path(game), :lastmod => game.updated_at
+  end
   # Put links creation logic here.
   #
   # The root path '/' and sitemap index file are added automatically for you.
