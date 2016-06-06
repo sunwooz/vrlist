@@ -14,9 +14,11 @@
     %br
     Released:
     = @game.date_developed.strftime("%b %d, %Y")
-    %br
-    = @game.price
-    %br
+    / free or paid
+    - if @game.price != 'free'
+      = "$" + @game.price
+    - if @genre_list.include?('free')
+      .tag Free
     = @game.genre_list
     %br
     = @game.category
