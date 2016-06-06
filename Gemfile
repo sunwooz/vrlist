@@ -34,6 +34,7 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'markdown-rails'
 gem 'redcarpet'
 gem "jquery-slick-rails"
+gem 'sitemap_generator'
 
 group :production do
   gem 'rails_12factor'
