@@ -31,6 +31,10 @@ class GamesController < ApplicationController
     end
   end
 
+  def link_index
+    @games = Game.all
+  end
+
   def create
     @game = Game.new(game_params)
 

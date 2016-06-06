@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   patch '/post/:id' => 'posts#update'
 
   #games
-
+  get '/gearvr/games_list' => 'games#link_index'
   get '/gearvr' => 'games#index', as: :games
   get '/gearvr/new' => 'games#new', as: :new_game
   post '/gearvr' => 'games#create'
@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   patch '/gearvr/:id' => 'games#update'
   delete '/gearvr/:id' => 'games#destroy'
   get '/add_genre/:genre' => 'games#add_genre', as: :add_genre
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
