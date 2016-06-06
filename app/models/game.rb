@@ -22,4 +22,12 @@ class Game < ActiveRecord::Base
   def self.latest
     order('date_developed DESC')
   end
+
+  def full_url
+    if !website.include?('http')
+      "https://#{self.website}"
+    else
+      self.website
+    end
+  end
 end
