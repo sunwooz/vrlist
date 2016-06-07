@@ -10,7 +10,7 @@
     = rating_for @game, "rating", enable_half: true, half_show: true, star_path: '/images/ratyrate'
     %br
     Developers: 
-    = @game.developer
+    = link_to @game.developer, developer_path(@game.developer)
     %br
     Released:
     = @game.date_developed.strftime("%b %d, %Y")

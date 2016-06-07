@@ -1,0 +1,7 @@
+%h1= @developer
+%br
+
+.row
+  - @games.each do |game|
+    .col-xs-12.col-md-3.single-game
+      = link_to (image_tag game.thumbnail.url, class: 'img-responsive main-image'), game

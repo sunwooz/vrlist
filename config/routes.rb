@@ -23,7 +23,9 @@ Rails.application.routes.draw do
   patch '/gearvr/:id' => 'games#update'
   delete '/gearvr/:id' => 'games#destroy'
   get '/add_genre/:genre' => 'games#add_genre', as: :add_genre
-  
+
+  #developers
+  get 'gearvr/developer/:developer' => 'developers#show', as: :developer
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
