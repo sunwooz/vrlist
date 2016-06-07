@@ -53,7 +53,14 @@ class GamesController < ApplicationController
   def show
     @game = Game.friendly.find(params[:id])
     @youtube_videos = @game.youtube_videos.split if !@game.youtube_videos.nil?
-    @genre_list = @game.genre_list
+    @tags_list = @game.genre_list.split(',')[0]
+
+    #filter genre list - features/genres/free(paid)
+    features = ['free', 'paid', 'single-player', 'multi-player', 'internet-required', 'gamepad-required', 'gamepad-support', 'touchpad-support']
+
+    @price_tag = @tags_list.include?('free') ? 'Free' : 'Paid'
+    @genre_tags = (@tags_list - features)
+    @feature_tags = @tags_list.select { |genre| features.include?(genre) } - ['free', 'paid']
     render layout: 'full-width'
   end
 

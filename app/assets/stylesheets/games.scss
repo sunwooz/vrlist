@@ -129,6 +129,29 @@ h2.game-title {
   font-size: 50px;
 }
 
+.tag {
+  display: inline;
+  padding: 5px;
+  line-height: 35px;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+
+.genre {
+  background-color: #F16745;
+  color: white;
+}
+
+.price {
+  background-color: #4CC3D9;
+  color: white;
+}
+
+.feature {
+  background-color: #7BC8A4;
+  color: white;
+}
+
 /*checkbox css*/
 
 .checkbox-title {

@@ -9,19 +9,20 @@
    
     = rating_for @game, "rating", enable_half: true, half_show: true, star_path: '/images/ratyrate'
     %br
-    Developers: 
+    = @game.category.capitalize
+    %br
+    More games by 
     = link_to @game.developer, developer_path(@game.developer)
     %br
     Released:
     = @game.date_developed.strftime("%b %d, %Y")
-    / free or paid
-    - if @game.price != 'free'
-      = "$" + @game.price
-    - if @genre_list.include?('free')
-      .tag Free
-    = @game.genre_list
     %br
-    = @game.category
+    .tag.price= @price_tag
+    - @genre_tags.each do |genre|
+      .tag.genre= genre
+    - @feature_tags.each do |feature|
+      .tag.feature= feature
+    
     %br
     %a{ href: @game.full_url, target: '_blank' }= @game.full_url
     %br
