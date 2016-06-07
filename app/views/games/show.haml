@@ -14,6 +14,8 @@
     More games by 
     = link_to @game.developer, developer_path(@game.developer)
     %br
+    %a{ href: @game.full_url, target: '_blank' }= @game.full_url
+    %br
     Released:
     = @game.date_developed.strftime("%b %d, %Y")
     %br
@@ -23,8 +25,6 @@
     - @feature_tags.each do |feature|
       .tag.feature= feature
     
-    %br
-    %a{ href: @game.full_url, target: '_blank' }= @game.full_url
     %br
     = @game.detail
 
