@@ -58,7 +58,7 @@ class GamesController < ApplicationController
     #filter genre list - features/genres/free(paid)
     features = ['free', 'paid', 'single-player', 'multi-player', 'internet-required', 'gamepad-required', 'gamepad-support', 'touchpad-support']
 
-    @price_tag = @tags_list.include?('free') ? 'Free' : 'Paid'
+    @price_tag = @tags_list.include?('free') ? 'free' : 'paid'
     @genre_tags = (@tags_list - features)
     @feature_tags = @tags_list.select { |genre| features.include?(genre) } - ['free', 'paid']
     render layout: 'full-width'
