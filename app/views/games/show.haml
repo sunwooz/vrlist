@@ -11,6 +11,8 @@
     %br
     = @game.category.capitalize
     %br
+    = @game.dollar_price
+    %br
     More games by 
     = link_to @game.developer, developer_path(@game.developer)
     %br

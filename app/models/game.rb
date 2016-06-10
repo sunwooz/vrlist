@@ -30,4 +30,8 @@ class Game < ActiveRecord::Base
       self.website
     end
   end
+
+  def dollar_price
+    "$#{price}"
+  end
 end
