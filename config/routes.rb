@@ -26,6 +26,9 @@ Rails.application.routes.draw do
 
   #developers
   get 'gearvr/developer/:developer' => 'developers#show', as: :developer
+
+  #pages
+  get '/about-vrmachine' => 'pages#about'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

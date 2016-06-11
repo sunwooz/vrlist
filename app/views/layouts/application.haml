@@ -25,6 +25,7 @@
         =# link_to 'Gear VR News', posts_tag_path('gear-vr-news'), class: 'nav-links'
         =# link_to 'Top 10 Gear VR Games', posts_tag_path('top-list'), class: 'nav-links'
         = link_to 'Search Gear VR', root_url, class: 'nav-links'
+        = link_to 'About VRMachine', '/about-vrmachine', class: 'nav-links'
         - if current_user && current_user.email == 'yangsunwoo@gmail.com'
           = link_to 'New Game', new_game_path
           = link_to 'New Post', new_post_path
