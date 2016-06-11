@@ -23,7 +23,7 @@
   %body.overflow-x-hidden{ class: params[:controller] + "-" + params[:action] }
     .row
       .col-xs-12.no-padding.site-nav
-        = link_to 'The VR Machine', root_url, class: 'logo'
+        = link_to image_tag("https://s3.amazonaws.com/vrlist/misc/logo.png", alt: "VRMachine - Your Gear VR Search Engine", class: 'logo'), root_url
         =# link_to 'Gear VR News', posts_tag_path('gear-vr-news'), class: 'nav-links'
         =# link_to 'Top 10 Gear VR Games', posts_tag_path('top-list'), class: 'nav-links'
         = link_to 'Search Gear VR', root_url, class: 'nav-links'

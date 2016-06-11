@@ -2,13 +2,16 @@
 
 .site-nav {
   background: image-url("stardust.png") center repeat;
-  height: 60px;
+  height: 80px;
   margin-bottom: 20px;
 }
 
 .site-nav a.nav-links {
   color: #F8FBFF;
   padding-right: 10px;
+  display: inline-block;
+  line-height: 100%;
+  vertical-align: middle;
 }
 
 .site-nav a.nav-links:hover {
@@ -24,11 +27,9 @@
 }
 
 .logo {
-  font-family: 'Permanent Marker', cursive;
-  color: #F8FBFF;
   padding-left: 50px;
-  font-size: 40px;
   margin-right: 30px;
+  height: 80px;
 }
 
 .logo:active {
