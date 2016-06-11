@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   patch '/post/:id' => 'posts#update'
 
   #games
-  get '/gearvr/games_list' => 'games#link_index'
+  #get '/gearvr/games_list' => 'games#link_index'
   get '/gearvr' => 'games#index', as: :games
   get '/gearvr/new' => 'games#new', as: :new_game
   post '/gearvr' => 'games#create'
