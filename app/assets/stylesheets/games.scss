@@ -3,7 +3,6 @@
 .site-nav {
   background: image-url("stardust.png") center repeat;
   height: 80px;
-  margin-bottom: 20px;
 }
 
 .site-nav a.nav-links {
@@ -73,8 +72,7 @@
 
 h2.game-name {
   width: 85%;
-  position: absolute; 
-  top: 150px; 
+  position: absolute;
   left: 30px;
   color: white;
   font-family: 'Quattrocento', serif;
@@ -101,6 +99,12 @@ h2.show-page {
   margin-bottom: 30px;
 }
 
+
+/*index page */
+
+#result {
+  margin-top: 20px;
+}
 /*show page*/
 
 #media-wrapper {
