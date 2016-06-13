@@ -35,6 +35,7 @@ gem 'markdown-rails'
 gem 'redcarpet'
 gem "jquery-slick-rails"
 gem 'sitemap_generator'
+gem 'will_paginate-bootstrap'
 
 group :production do
   gem 'rails_12factor'

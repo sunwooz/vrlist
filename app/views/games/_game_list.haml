@@ -3,4 +3,4 @@
     = link_to (image_tag game.thumbnail.url, class: 'img-responsive main-image'), game
     / %h2.game-name= link_to game.name, game
 
-= will_paginate @games
+= will_paginate @games, renderer: BootstrapPagination::Rails
