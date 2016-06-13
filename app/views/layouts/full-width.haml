@@ -13,8 +13,8 @@
 
     .container.container-full
       .row
-        .col-xs-12.no-padding.show-site-nav
-          = link_to 'The VR Machine', root_url, class: 'logo'
+        .col-xs-12.no-padding.site-nav
+          = link_to image_tag("https://s3.amazonaws.com/vrlist/misc/logo.png", alt: "VRMachine - Your Gear VR Search Engine", class: 'logo'), root_url
           = link_to 'Search Gear VR', root_url, class: 'nav-links'
           = link_to 'About VRMachine', '/about-vrmachine', class: 'nav-links'
           - if current_user && current_user.email == 'yangsunwoo@gmail.com'
