@@ -12,6 +12,10 @@
   = check_box_tag 'categories[]', "app", true, class: 'checkbox-filter categories'
   = label_tag :app, "<span></span>app".html_safe, class: 'checkbox-label'
 
+.checkbox-wrapper.checked
+  = check_box_tag 'categories[]', "concept", true, class: 'checkbox-filter categories'
+  = label_tag :concept, "<span></span>concept".html_safe, class: 'checkbox-label'
+
 
 %h2.checkbox-title Features
 
