@@ -2,8 +2,6 @@
   .col-xs-6
 
     %h2= @post.title
-    Release Date:
-    = @post.release_date.strftime("%b %d, %Y")
 
     = raw @post.body_html
   .col-xs-6#media-wrapper
