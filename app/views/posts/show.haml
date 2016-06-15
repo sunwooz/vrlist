@@ -1,7 +1,16 @@
-= image_tag @post.image.url(:large)
+.row.games-show-wrapper
+  .col-xs-6
 
-= @post.title
+    %h2= @post.title
+    Release Date:
+    = @post.release_date.strftime("%b %d, %Y")
 
-= @post.tag_list
-
-= raw @post.body_html
+    = raw @post.body_html
+  .col-xs-6#media-wrapper
+    #slick
+      - if @youtube_videos
+        - @youtube_videos.each do |youtube_video|
+          %iframe{ width: "567", height: "400", src: "//www.youtube.com/embed/#{youtube_video}", frameborder: "0", allowfullscreen: true, webkitAllowFullScreen: true, mozallowfullscreen: true }
+      - if @post.attachments
+        - @post.attachments.each do |attachment|
+          %img.img-responsive{ src: attachment.image.url }

@@ -1,4 +1,6 @@
 class Post < ActiveRecord::Base
+  has_many :attachments
+  
   before_save :generate_body_html
 
   has_attached_file :image, styles: { large: "1555×1037" }

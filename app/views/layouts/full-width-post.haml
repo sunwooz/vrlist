@@ -1,14 +1,14 @@
 !!!
 %html
   %head
-    %title= @game.name + " | Gear VR Games"
+    %title= @post.title + " | Upcoming Gear VR Games"
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
     = javascript_include_tag 'ratyrate.js'
     %link{ href: 'https://fonts.googleapis.com/css?family=Ubuntu:700|Permanent+Marker', rel: 'stylesheet', type: 'text/css' }
     %script{:async => "async", "data-sumo-site-id" => "a7bc94ffd217663146cc45f1d320b97e9246003c73dfc13f976f171394d5efb3", :src => "//load.sumome.com/"}
-    %meta{:content => "#{@game.detail}", :name => "description"}/
+    %meta{:content => "#{@post.content}", :name => "description"}/
   %body
 
     .container.container-full
@@ -19,7 +19,7 @@
           = link_to 'Upcoming Gear VR Games', posts_tag_path('upcoming'), class: 'nav-links'
           = link_to 'About VRMachine', '/about-vrmachine', class: 'nav-links'
           - if current_user && current_user.email == 'yangsunwoo@gmail.com'
-            = link_to 'Edit Game', edit_game_path(@game)
-            = link_to 'Destroy Game', @game, method: :delete, confirm: 'You sure boya?'
+            = link_to 'Edit Post', edit_post_path(@post)
+            = link_to 'Destroy Post', @post, method: :delete, confirm: 'You sure boya?'
           
       = yield

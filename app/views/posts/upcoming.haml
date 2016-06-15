@@ -1,0 +1,8 @@
+%h1 Upcoming Gear VR Games
+%br
+
+.row
+  - @posts.each do |post|
+    .col-xs-12.col-md-3.single-game
+      = link_to (image_tag post.image.url, class: 'img-responsive main-image'), post
+      %h3= post.title
